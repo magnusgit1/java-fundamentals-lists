@@ -3,6 +3,7 @@ package com.booleanuk.core;
 import com.booleanuk.helpers.ExerciseBase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Exercise extends ExerciseBase {
     /*
@@ -44,6 +45,11 @@ public class Exercise extends ExerciseBase {
            second number contained in the list that is returned from getFavouriteNumbers
      */
 
+    public int getSecondNumber(){
+        List<Integer> res = getFavouriteNumbers();
+        return res.get(1);
+    }
+
 
 
     /*
@@ -56,6 +62,11 @@ public class Exercise extends ExerciseBase {
          https://www.programiz.com/java-programming/library/arraylist/replaceall
      */
 
+    public ArrayList<Integer> multiply(ArrayList<Integer> ls, int n){
+         ls.replaceAll(k -> k * n);
+         return ls;
+    }
+
 
 
     /*
@@ -65,6 +76,10 @@ public class Exercise extends ExerciseBase {
      */
 
 
+    public boolean isEmpty(ArrayList<String> ls){
+        return ls.isEmpty();
+    }
+
 
     /*
         TODO: 4. Create a method named addIngredient that accepts two parameters in this order:
@@ -73,6 +88,10 @@ public class Exercise extends ExerciseBase {
          The method must add the second parameter into the list provided and then return the list
      */
 
+    public ArrayList<String> addIngredient(ArrayList<String> ls, String str){
+        ls.add(str);
+        return ls;
+    }
 
 
     /*
@@ -81,6 +100,11 @@ public class Exercise extends ExerciseBase {
          - A string
          The method must remove the second parameter from the list and then return the list
      */
+
+    public ArrayList<String> removeIngredient(ArrayList<String> ls, String str){
+        ls.remove(str);
+        return ls;
+    }
 
 
 
@@ -91,6 +115,7 @@ public class Exercise extends ExerciseBase {
          The method must return a boolean that indicates whether the second parameter exists in the provided list
      */
 
-
-
+    public boolean containsIngredient(ArrayList<String> ls, String str){
+        return ls.contains(str);
+    }
 }
